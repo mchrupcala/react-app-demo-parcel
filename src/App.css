@@ -1,38 +1,69 @@
-.App {
+.App, #root, html, body {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  width: 100vh !important;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  box-sizing:border-box;
+  background-color: #6dcebd;
+  padding: 15%;
+  border-radius: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  color: black;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form > div {
   display: flex;
-  flex-direction: column;
+  margin-top: 20px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+form > div > * {
+  margin-right: 15px;
+}
+
+input {
+  padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * .5);
+  margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * .5);
+  background-color: white !important;
+  white-space: nowrap;
+  transform: translate(0, 0);
+  transform-origin: 0 0;
+  background: var(--color-background);
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.greeter-label {
+  align-items: center;
+}
+
+button {
+  padding: 5px;
   color: white;
+  background-color: black;
+  border-radius: 20px;
+  width: 160px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active {
+  background-color: #696969;
 }
